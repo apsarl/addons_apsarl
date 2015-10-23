@@ -27,7 +27,7 @@
     'description': """
 ================================================================================
 Accounting chart for SYSCOHADA area according to the 2014 - 2015 new standards.
-- Account type from Financial annual statement
+- Account type from Annual Financial Statement
 - New Accounts
 - All VAT Taxes
 ================================================================================

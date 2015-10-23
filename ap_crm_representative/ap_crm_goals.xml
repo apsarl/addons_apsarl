@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- goal definitions -->
+        <record model="gamification.goal.definition" id="definition_apcrm_amount_repsales">
+            <field name="name">Representative Sales Amount</field>
+            <field name="description"></field>
+            <field name="computation_mode">sum</field>
+            <field name="monetary">True</field>
+            <field name="model_id" eval="ref('ap_crm_representative.model_rep_sales')" />
+            <field name="field_id" eval="ref('ap_crm_representative.field_rep_sales_salecustom_amount')" />
+            <field name="field_date_id" eval="ref('ap_crm_representative.field_rep_sales_salecustom_date')" />
+            <field name="domain">[('user_id','=',user.id)]</field>
+        </record>
+
+		<record model="gamification.goal.definition" id="definition_apcrm_qtity_repsales">
+            <field name="name">Quantities Representative Sales</field>
+            <field name="description"></field>
+            <field name="computation_mode">sum</field>
+            <field name="monetary">False</field>
+            <field name="model_id" eval="ref('ap_crm_representative.model_rep_sales')" />
+            <field name="field_id" eval="ref('ap_crm_representative.field_rep_sales_salecustom_quantity')" />
+            <field name="field_date_id" eval="ref('ap_crm_representative.field_rep_sales_salecustom_date')" />
+            <field name="domain">[('user_id','=',user.id)]</field>
+        </record>
+
+        <!-- challenges -->
+        <record model="gamification.challenge" id="challenge_apcrm_sale">
+            <field name="name">Monthly Representative Sales Targets</field>
+            <field name="period">monthly</field>
+            <field name="visibility_mode">ranking</field>
+            <field name="report_message_frequency">weekly</field>
+        </record>
+
+         <!-- lines -->
+        <record model="gamification.challenge.line" id="line_apcrm_sale1">
+            <field name="definition_id" eval="ref('definition_apcrm_amount_repsales')" />
+            <field name="target_goal">20000</field>
+            <field name="challenge_id" eval="ref('challenge_apcrm_sale')" />
+        </record>
+
+		<record model="gamification.challenge.line" id="line_apcrm_sale2">
+            <field name="definition_id" eval="ref('definition_apcrm_qtity_repsales')" />
+            <field name="target_goal">20000</field>
+            <field name="challenge_id" eval="ref('challenge_apcrm_sale')" />
+        </record>
+       
+    </data>
+</openerp>

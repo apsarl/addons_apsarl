@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rep_area,access.rep.area,model_rep_area,base.group_sale_manager,1,1,1,1
+access_rep_product,access.rep.product,model_rep_product,base.group_sale_manager,1,1,1,1
+access_rep_sales_salesman,access.rep.sales.salesman,model_rep_sales,base.group_sale_salesman,1,0,0,0
+access_rep_sales_manager,access.rep.sales.manager,model_rep_sales,base.group_sale_manager,1,1,1,1

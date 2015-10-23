@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		   <!--Vue table -->
+    <record model="ir.ui.view" id="rep_area_tree">
+        <field name="name">rep.area.tree</field>
+        <field name="model">rep.area</field>
+        <field name="arch" type="xml">
+            <tree string="Areas" editable="top">
+                 <field name="name"/>
+            </tree>
+        </field>
+    </record>
+	
+		<!-- L'action du menu -->
+	<record model="ir.actions.act_window" id="action_rep_area">
+      <field name="name">Areas</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">rep.area</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">form,tree</field>
+      <field name="view_id" ref="rep_area_tree"/>
+           <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+            Click here to create an area.
+        </p>
+      </field>
+    </record>
+
+    <!-- Menu gauche  Area -->   
+    <menuitem 
+              name="Areas" 
+              id="menu_rep_area" 
+              parent="base.menu_base_config" 
+              sequence="100" 
+			  action="action_rep_area"
+              />
+  
+    <!-- # -->
+		
+    </data>
+</openerp>

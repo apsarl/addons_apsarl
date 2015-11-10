@@ -32,6 +32,7 @@
 					- Fiscal Position for Ivory Coast (TO DO)
 					""",
     'website': 'http://www.africaperformances-ci.com/',
+	'license': 'AGPL-3'
     'depends' : ['account', 'base_vat'],
     'demo' : [],
     'data' : ['l10n_syscoa_ap_ci_data.xml','l10n_syscoa_ap_ci_wizard.xml'],

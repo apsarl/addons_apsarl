@@ -20,16 +20,17 @@
 ##############################################################################
 
 {
-    'name' : 'PCM - Accounting Mauritania by Africa Performances',
+    'name' : 'PCM 2015 - Accounting Mauritania by Africa Performances',
     'version' : '1.0',
     'author' : 'Africa Performances',
     'category' : 'Localization/Account Charts',
     'description': 	"""
 					Accounting chart PCM for Mauritania.
 					- Account type from Annual Financial Statement (TO DO)
-					- VAT Taxes and Fiscal Position for Mauritania (TO DO)
+					- VAT Taxes and Fiscal Position for Ivory Coast (TO DO)
 					""",
     'website': 'http://www.africaperformances-ci.com/',
+	'license': 'AGPL-3'
     'depends' : ['account', 'base_vat'],
     'demo' : [],
     'data' : ['l10n_pcm_data.xml','l10n_pcm_wizard.xml'],

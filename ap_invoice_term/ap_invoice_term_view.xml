@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		   <!--Graph view -->
+    <record id="view_account_aged_report_graph" model="ir.ui.view">
+         <field name="name">account.aged.report.graph</field>
+         <field name="model">account.aged.report</field>
+         <field name="arch" type="xml">
+             <graph string="Aged Invoices Analysis" type="pivot">
+				 <field name="type" type="row"/>
+                 <field name="partner_id" type="row"/>
+				 <field name="ref" type="row"/>
+                 <field name="date_maturity" type="col"/>
+                 <field name="amount" type="measure"/>
+             </graph>
+         </field>
+    </record>
+	
+
+
+        <!-- Vue recherche -->
+
+    <record id="ap_invoice_term_search" model="ir.ui.view">
+        <field name="name">ap.invoice.term.search</field>
+        <field name="model">account.aged.report</field>
+		<field name="type">search</field>
+        <field name="arch" type="xml">
+                <search string="Search">
+				  <field name="partner_id"/>
+					 <group expand="0" string="Group By">
+						<filter string="By Invoice Type" domain="[]" context="{'group_by':'type'}"/>
+                        <filter string="By Partner" domain="[]" help="Partner" context="{'group_by':'partner_id'}"/>
+						<filter string="By Maturity Date" domain="[]" context="{'group_by':'date_maturity'}"/>
+						<filter string="By Invoice" domain="[]" context="{'group_by':'ref'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>	
+
+	
+		<!-- L'action du menu -->
+    <record model="ir.actions.act_window" id="action_account_aged_report">
+      <field name="name">Invoices Analysis</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">account.aged.report</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">graph</field>
+      <field name="view_id" ref="view_account_aged_report_graph"/>
+    </record>
+
+    <!-- Menu gauche  -->   
+    <menuitem 
+              name="Invoices Analysis" 
+              id="menu_account_aged_report" 
+              parent="account.menu_finance_reporting"
+			  groups="account.group_account_manager"
+              sequence="100" 
+			  action="action_account_aged_report"
+              />
+    <!-- # -->
+		
+    </data>
+</openerp>

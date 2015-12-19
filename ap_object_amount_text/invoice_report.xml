@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		
+		<!-- Vue report-->
+		<template id="invoice_ap_object_amount_text_report" inherit_id="account.report_invoice_document">
+			<xpath expr="//table[@class='table table-condensed']" position="before">
+				<tr>
+					<td>
+					<strong>Objet</strong>
+					</td>
+					<td>
+					<span t-field="o.object"/>
+					</td>
+				</tr>
+			</xpath>
+			<xpath expr="//div/table[@class='table table-condensed']" position="after">
+				<tr>
+					<td>
+					<strong>Montant en lettres</strong>
+					</td>
+					<td>
+					<span t-field="o.amount_text"/>
+					</td>
+				</tr>
+			</xpath>
+		</template>
+		
+	</data>
+</openerp>

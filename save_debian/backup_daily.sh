@@ -1,17 +1,18 @@
 #! /bin/bash
 
 #////////////////////////////////////////////////////////////////////////////////////#
-# Script de sauvegarde complète d'Odoo                                               #
-# Par Richmond FIKO : 2013-06-23                                                     #
+# Script de sauvegarde complète d'Odoo DEBIAN                                        #
+# Par Richmond FIKO 			                                                     #
 # http://www.africaperformances-ci.com/                                              #
 # création : 2015-11                                                                 #
-# derniere MAJ: 17-11-2015                                                           #
+# derniere MAJ: 09-01-2016                                                           #
 #                                                                                    #
 # TO DO: Mettre en oeuvre la restauration du daily sur le serveur                    #
 #                                                                                    #
 # Le script effectue une sauvegarde complète de la base de données au format dump    #
 # A exécuter en 'root'                                                               #
-#                                                                                    #
+# This program is distributed in the hope that it will be useful,					 #
+# but WITHOUT ANY WARRANTY                                                		 	 #
 #                                                                                    #
 #   Utilisation :                                                                    #
 #   -------------                                                                    #

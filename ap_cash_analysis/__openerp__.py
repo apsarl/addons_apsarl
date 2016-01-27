@@ -4,7 +4,7 @@
     'name': 'Cash Analysis and forcasting',
     'version': '1.0',
     'author': 'Africa Performances',
-    'category': 'A remplacer',
+    'category': 'Accounting',
     'website': 'http://www.africaperformances-ci.com/',
     'description': """
 Analysis of the partner invoice term with Odoo pivot table in reporting menu.""",

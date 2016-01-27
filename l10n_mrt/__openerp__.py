@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2015 AFRICA PERFORMANCES (<www.africaperformances-ci.com>).
+#    Copyright (C) 2016 AFRICA PERFORMANCES (<www.africaperformances-ci.com>).
 #    contact: infos@africaperformances-ci.com
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -20,21 +20,22 @@
 ##############################################################################
 
 {
-    'name' : 'PCM 2015 - Accounting Mauritania by Africa Performances',
+    'name' : 'PCM Chart Of Account - Mauritania by Africa Performances',
     'version' : '1.0',
     'author' : 'Africa Performances',
     'category' : 'Localization/Account Charts',
     'description': 	"""
 					Accounting chart PCM for Mauritania.
-					- Account type from Annual Financial Statement (TO DO)
-					- VAT Taxes and Fiscal Position for Ivory Coast (TO DO)
+					- Account type from Annual Financial Statement
+					- VAT Taxes and Fiscal Position (TO DO)
 					""",
     'website': 'http://www.africaperformances-ci.com/',
-	'license': 'AGPL-3'
     'depends' : ['account', 'base_vat'],
     'demo' : [],
-    'data' : ['l10n_pcm_data.xml','l10n_pcm_wizard.xml'],
-    'auto_install': False,
-    'installable': True
+    'data' : ['l10n_mrt_data.xml','l10n_mrt_wizard.xml'],
+	'auto_install': False,
+    'installable': True,
+    'active': False,
+    'application': False,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

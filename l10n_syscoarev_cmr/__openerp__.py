@@ -35,7 +35,9 @@
     'depends' : ['account', 'base_vat'],
     'demo' : [],
     'data' : ['l10n_syscoa_ap_cam_data.xml','l10n_syscoa_ap_cam_wizard.xml'],
-    'auto_install': False,
-    'installable': True
+	'auto_install': False,
+    'installable': True,
+    'active': False,
+    'application': False,	
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

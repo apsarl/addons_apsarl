@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2015 AFRICA PERFORMANCES (<www.africaperformances-ci.com>).
+#    Copyright (C) 2016 AFRICA PERFORMANCES (<www.africaperformances-ci.com>).
 #    contact: infos@africaperformances-ci.com
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -20,22 +20,22 @@
 ##############################################################################
 
 {
-    'name' : 'SYSCOA 2015 - Accounting Ivory Coast by Africa Performances',
+    'name' : 'ALGERIAN Chart Of Account SCF 2014 by Africa Performances',
     'version' : '1.0',
     'author' : 'Africa Performances',
     'category' : 'Localization/Account Charts',
     'description': 	"""
-					Accounting chart SYSCOA for Ivory Coast according to the 2014 - 2015 new standards.
+					Accounting chart COA for Algeria.
 					- Account type from Annual Financial Statement
-					- New Accounts according to the standards
-					- VAT Taxes (General Tax 18%)
-					- Fiscal Position for Ivory Coast (TO DO)
+					- VAT Taxes and Fiscal Position (TO DO)
 					""",
     'website': 'http://www.africaperformances-ci.com/',
     'depends' : ['account', 'base_vat'],
     'demo' : [],
-    'data' : ['l10n_syscoa_ap_ci_data.xml','l10n_syscoa_ap_ci_wizard.xml'],
-    'auto_install': False,
-    'installable': True
+    'data' : ['l10n_dzd_data.xml','l10n_dzd_wizard.xml'],
+	'auto_install': False,
+    'installable': True,
+    'active': False,
+    'application': False,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

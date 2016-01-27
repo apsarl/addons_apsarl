@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ap_cash_analysis_ext
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20151106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-14 05:53+0000\n"
+"PO-Revision-Date: 2015-12-14 05:55+0000\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.8.3\n"
+"Last-Translator: \n"
+"Language: fr\n"
+
+#. module: ap_cash_analysis_ext
+#: view:account.aged.report:ap_cash_analysis_ext.view_account_aged_report_graph
+msgid "Aged Invoices Analysis"
+msgstr "Analyse de echeances"
+
+#. module: ap_cash_analysis_ext
+#: field:account.aged.report,amount:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: ap_cash_analysis_ext
+#: view:crossovered.budget.lines:ap_cash_analysis_ext.view_crossovered_budget_line_graph
+msgid "Budget Lines"
+msgstr "Lignes de budget"
+
+#. module: ap_cash_analysis_ext
+#: view:account.aged.report:ap_cash_analysis_ext.ap_invoice_term_search
+msgid "By Deadline"
+msgstr "Par echeances"
+
+#. module: ap_cash_analysis_ext
+#: view:account.aged.report:ap_cash_analysis_ext.ap_invoice_term_search
+msgid "By Invoice"
+msgstr "Par facture"
+
+#. module: ap_cash_analysis_ext
+#: view:account.aged.report:ap_cash_analysis_ext.ap_invoice_term_search
+msgid "By Invoice Type"
+msgstr "Par type de facture"
+
+#. module: ap_cash_analysis_ext
+#: view:account.aged.report:ap_cash_analysis_ext.ap_invoice_term_search
+msgid "By Partner"
+msgstr "Par partenaire"
+
+#. module: ap_cash_analysis_ext
+#: field:account.aged.report,deadline:0
+msgid "Due date"
+msgstr "Date echeance"
+
+#. module: ap_cash_analysis_ext
+#: view:account.aged.report:ap_cash_analysis_ext.ap_invoice_term_search
+msgid "Group By"
+msgstr "Grouper par"
+
+#. module: ap_cash_analysis_ext
+#: field:account.aged.report,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: ap_cash_analysis_ext
+#: model:ir.actions.act_window,name:ap_cash_analysis_ext.action_account_aged_report
+#: model:ir.ui.menu,name:ap_cash_analysis_ext.menu_account_aged_report
+msgid "Invoices Analysis"
+msgstr "Analyse des factures"
+
+#. module: ap_cash_analysis_ext
+#: model:ir.model,name:ap_cash_analysis_ext.model_account_aged_report
+msgid "Non reconciliated operations in moves lines"
+msgstr "Opérations non reconcilié"
+
+#. module: ap_cash_analysis_ext
+#: field:account.aged.report,partner_id:0
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: ap_cash_analysis_ext
+#: selection:account.aged.report,type:0
+msgid "Payable"
+msgstr "Fournisseur"
+
+#. module: ap_cash_analysis_ext
+#: selection:account.aged.report,type:0
+msgid "Receivable"
+msgstr "Client"
+
+#. module: ap_cash_analysis_ext
+#: field:account.aged.report,name:0
+msgid "Reference"
+msgstr "Reference"
+
+#. module: ap_cash_analysis_ext
+#: view:account.aged.report:ap_cash_analysis_ext.ap_invoice_term_search
+msgid "Search"
+msgstr "Recherche"
+
+#. module: ap_cash_analysis_ext
+#: help:account.aged.report,deadline:0
+msgid ""
+"This field is used for payable and receivable journal entries. You can put "
+"the limit date for the payment of this line."
+msgstr ""
+
+#. module: ap_cash_analysis_ext
+#: field:account.aged.report,type:0
+msgid "Type"
+msgstr ""

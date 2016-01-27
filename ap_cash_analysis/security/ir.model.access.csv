@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_cash_forcast,access.account.cash.forcast,model_account_cash_forcast,account.group_account_manager,1,0,0,0
+access_account_cash_analysis,access.account.cash.analysis,model_account_cash_analysis,account.group_account_manager,1,1,1,1

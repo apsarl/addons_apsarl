@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<!-- Vue tree account_cash_forcast-->
+		<!-- Vue table -->
+        <record id="account_cash_forcast_tree" model="ir.ui.view">
+            <field name="name">account.cash.forcast.tree</field>
+            <field name="model">account.cash.forcast</field>
+            <field name="arch" type="xml">
+              <tree string="Cash forcast" editable="top">
+                    <field name="type"/>
+					<field name="name"/>
+                    <field name="deadline"/>
+					<field name="amount"/>
+			  </tree>
+			</field>
+		</record>
+		
+		<!-- Vue formulaire account_cash_forcast-->
+		<!-- Vue formulaire -->
+        <record id="account_cash_forcast_form" model="ir.ui.view">
+            <field name="name">account.cash.forcast.form</field>
+            <field name="model">account.cash.forcast</field>
+            <field name="arch" type="xml">
+              <form string="Cash forcast">
+				<group col="4">
+                    <field name="type"/>
+                    <field name="name"/>
+					<field name="deadline"/>
+					<field name="amount"/>	
+					<field name="active"/>	
+				</group>
+			  </form>
+			</field>
+		</record>
+	
+	
+		<!-- L'action du menu account_cash_forcast-->
+    <record model="ir.actions.act_window" id="action_account_cash_forcast">
+      <field name="name">Cash Forecast</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">account.cash.forcast</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">form,tree</field>
+      <field name="view_id" ref="account_cash_forcast_tree"/>
+	  <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+            Click here to create cash forcast.
+        </p>
+	  </field>
+	</record>
+
+    <!-- Menu gauche  account_cash_analysis_graph-->   
+    <menuitem 
+              name="Cash Forecast" 
+              id="menu_account_cash_forcast" 
+              parent="account_budget.next_id_31"
+			  groups="account.group_account_manager"
+              sequence="10" 
+			  action="action_account_cash_forcast"
+              />
+    <!-- # -->	
+	
+	
+	
+		   <!--SEPARATOR SEPARATOR SEPARATOR SEPARATOR SEPARATOR SEPARATOR SEPARATOR-->	
+	
+		   <!--Graph view account_cash_analysis_graph-->
+    <record id="view_account_cash_analysis_graph" model="ir.ui.view">
+         <field name="name">account.cash.analysis.graph</field>
+         <field name="model">account.cash.analysis</field>
+         <field name="arch" type="xml">
+             <graph string="Cash Analysis" type="pivot">
+             </graph>
+         </field>
+    </record>
+	
+        <!-- Vue recherche account_cash_analysis_graph-->
+
+    <record id="ap_account_cash_analysis_search" model="ir.ui.view">
+        <field name="name">ap.account.cash.analysis.search</field>
+        <field name="model">account.cash.analysis</field>
+		<field name="type">search</field>
+        <field name="arch" type="xml">
+                <search string="Search">
+				  <field name="partner_id"/>
+					 <group expand="0" string="Group By">
+						<filter string="By Invoice Type" domain="[]" context="{'group_by':'type'}"/>
+                        <filter string="By Partner" domain="[]" context="{'group_by':'partner_id'}"/>
+						<filter string="By Deadline" domain="[]" context="{'group_by':'deadline'}"/>
+						<filter string="By Invoice" domain="[]" context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>	
+
+	
+		<!-- L'action du menu account_cash_analysis_graph-->
+    <record model="ir.actions.act_window" id="action_account_cash_analysis_report">
+      <field name="name">Cash Analysis</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">account.cash.analysis</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">graph</field>
+      <field name="view_id" ref="view_account_cash_analysis_graph"/>
+    </record>
+
+    <!-- Menu gauche  account_cash_analysis_graph-->   
+    <menuitem 
+              name="Cash Analysis" 
+              id="menu_account_cash_analysis_report" 
+              parent="account.menu_finance_reporting"
+			  groups="account.group_account_manager"
+              sequence="100" 
+			  action="action_account_cash_analysis_report"
+              />
+    <!-- # -->
+		
+    </data>
+</openerp>

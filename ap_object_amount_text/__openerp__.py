@@ -8,7 +8,7 @@
     'website': 'http://www.africaperformances-ci.com/',
     'description': """
 using code NEXTMA nextma_facture_montant_lettres from V7 
-* Add object in sales order and invoice
+* Add object in sales order an invoice
 * Add amount to text in sales order an invoice
 """,
     'depends': ['sale','account',],

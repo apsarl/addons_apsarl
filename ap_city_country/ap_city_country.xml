@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-		   <!--Vue table -->
+		   <!--Vue table city -->
     <record model="ir.ui.view" id="res_ap_city_tree_id">
         <field name="name">res.ap.city.tree</field>
         <field name="model">res.ap.city</field>
@@ -10,11 +10,13 @@
             <tree string="Cities" editable="top">
                  <field name="name"/>
 				 <field name="country_id"/>
+                 <field name="city_latitude"/>
+				 <field name="city_longitude"/>
             </tree>
         </field>
     </record>
 	
-			   <!--Vue Formulaire -->
+			   <!--Vue Formulaire city-->
     <record model="ir.ui.view" id="res_ap_city_form_id">
         <field name="name">res.ap.city.form</field>
         <field name="model">res.ap.city</field>
@@ -24,14 +26,55 @@
                 <group col="4">
                     <field name="name"/>
                     <field name="country_id"/>
+                 <field name="city_latitude"/>
+				 <field name="city_longitude"/>
                 </group>
             </form>
         </field>
-    </record>
+     </record>
 	
 	
-	
-	
+		<!-- vue formulaire country -->	
+     <record model="ir.ui.view" id="res_ap_country_form_view">
+                <field name="name">res.country.ap.form</field>
+                <field name="model">res.country</field>
+                <field name="type">form</field>
+                <field name="inherit_id" ref="base.view_country_form"/>
+                <field name="arch" type="xml">
+                	<field name="currency_id" position="after">
+                         <field name="country_latitude"/>
+                         <field name="country_longitude"/>
+                	</field>
+                </field>
+            </record>
+			
+		<!-- vue liste country -->			
+     <record model="ir.ui.view" id="res_ap_country_tree_view">
+                <field name="name">res.country.ap.tree</field>
+                <field name="model">res.country</field>
+                <field name="type">tree</field>
+                <field name="inherit_id" ref="base.view_country_tree"/>
+                <field name="arch" type="xml">
+                	<field name="code" position="after">
+                         <field name="country_latitude"/>
+                         <field name="country_longitude"/>
+                	</field>
+                </field>
+            </record>
+
+		<!-- vue formulaire res.partner -->	
+     <record model="ir.ui.view" id="res_ap_partner_form_view">
+                <field name="name">res.partner.ap.form</field>
+                <field name="model">res.partner</field>
+                <field name="type">form</field>
+                <field name="inherit_id" ref="base.view_partner_form"/>
+                <field name="arch" type="xml">
+                	<field name="city" position="replace">
+                         <field name="city_id" placeholder="City" style="width: 40%" attrs="{'readonly': [('use_parent_address','=',True)]}"/>
+                	</field>
+                </field>
+            </record>			
+	 
 		<!-- L'action du menu -->
 	<record model="ir.actions.act_window" id="res_ap_city_action_id">
         <field name="name">City</field>

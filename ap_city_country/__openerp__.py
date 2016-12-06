@@ -10,7 +10,7 @@
 * Add a related field in partner view for cities
 """,
     'depends': ['base',],
-    'data': ['ap_city_country.xml',],
+#    'data': ['ap_city_country.xml',],
 	'auto_install': False,
     'installable': True,
     'active': False,

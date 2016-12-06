@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp> 
+<data noupdate="0">
+    <!--
+    # CIMA : Types de rapport CIMA
+    # Auteur : AFRICA PERFORMANCES
+    # Version du fichier : 1.0 
+    # Date : 12/2016
+    # 
+    #
+    -->
+
+        <record id="account_financial_report_bilan0" model="account.financial.report">
+            <field name="name">Compte 89 - Bilan</field>
+            <field name="sign" eval="-1" />
+        </record>	
+
+
+        <record id="account_financial_report_asstn0" model="account.financial.report">
+            <field name="name">Compte 80 - Assurances De Toute Nature</field>
+            <field name="sign" eval="-1" />
+        </record>	
+
+        <record id="account_financial_report_vicapi0" model="account.financial.report">
+            <field name="name">Compte 80 - Vie / Capitalisation</field>
+            <field name="sign" eval="-1" />
+        </record>	
+
+        <record id="account_financial_report_perprof0" model="account.financial.report">
+            <field name="name">Compte 87 - Compte General de Pertes et Profits</field>
+            <field name="sign" eval="-1" />
+        </record>	
+
+        <record id="account_financial_report_result0" model="account.financial.report">
+            <field name="name">Compte 88 - Resultats en Instance affectation</field>
+            <field name="sign" eval="-1" />
+        </record>	 
+</data>
+</openerp>

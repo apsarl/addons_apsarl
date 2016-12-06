@@ -20,23 +20,17 @@
 ##############################################################################
 
 {
-    'name' : 'CIMA Insurance Chart of Accounts - 2014',
+    'name' : 'CIMA Insurance account types',
     'version' : '1.0',
     'author' : 'Africa Performances',
-    'category' : 'Localization/Account Charts',
+    'category' : 'Accounting',
     'description': 	"""
-					IMPORTANT: After installation, the account width must be 4
-					
-					- Accounting chart CIMA for Insurance companies according to the 2014 revision
-					- Account type from Annual Financial Statement
-					- Control all account types and chart of account (TO DO)
-					- Set tax configuration (TO DO)
-					
+					- TO DO
 					""",
     'website': 'http://www.africaperformances-ci.com/',
-    'depends' : ['account', 'base_vat','l10n_cima_insurance_account_type',],
+    'depends' : ['account', 'base_vat'],
     'demo' : [],
-    'data' : ['l10n_cima_insurance_data.xml', 'l10n_cima_insurance_wizard.xml',],
+    'data' : ['l10n_cima_insurance_account_type.xml',],
 	'auto_install': False,
     'installable': True,
     'active': False,

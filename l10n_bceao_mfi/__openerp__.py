@@ -31,9 +31,9 @@
     'website': 'http://www.africaperformances-ci.com/',
     'depends' : ['account', 'base_vat'],
     'demo' : [],
-    'data' : [],
+    'data' : ['l10n_bceao_mfi_data.xml', 'l10n_bceao_mfi_wizard.xml'],
 	'auto_install': False,
-    'installable': False,
+    'installable': True,
     'active': False,
     'application': False,	
 }

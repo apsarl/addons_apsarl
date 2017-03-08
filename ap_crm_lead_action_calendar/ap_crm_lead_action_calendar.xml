@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--© <2016> <Africa Performances>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+	<data>
+		<!--lead view-->
+		<record id="view_ap_crm_lead_action_calendar_view_form" model="ir.ui.view">
+			<field name="name">Calendar in lead</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/div[@class='oe_title']" position="after">
+					<div>
+						<h1><field name="calendar_id" on_change="on_change_calendar_id(calendar_id)" placeholder="planned the action in calendar"/></h1>
+						<field name="planned_date"/>
+					</div>
+				</xpath>
+			</field>
+		</record>
+		
+		<!--opportunity view-->
+		<record id="view_ap_crm_oppor_action_calendar_view_form" model="ir.ui.view">
+			<field name="name">Calendar in opportunity</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/div[@class='oe_title']" position="after">
+					<div>
+						<h1><field name="calendar_id" on_change="on_change_calendar_id(calendar_id)" placeholder="planned the action in calendar"/></h1>
+						<field name="planned_date"/>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>
